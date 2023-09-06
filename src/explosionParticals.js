@@ -129,7 +129,7 @@ function createParticles() {
   const particleGeometry = new THREE.BufferGeometry();
 
   // Create a texture for the particles
-  const particleTexture = new THREE.TextureLoader().load("flare_01.png"); // Provide your own texture path
+  const particleTexture = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/src/flare_01.png"); // Provide your own texture path
   const particleMaterial = new THREE.PointsMaterial({
     size: 0.5,
     map: particleTexture, // Apply the texture to the particles

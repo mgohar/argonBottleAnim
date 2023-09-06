@@ -53,8 +53,8 @@ const environmentMap = cubeTextureLoader.load([
 // Bottle1 Model
 let bottle01 = "";
 let bottle02 = "";
-const model1 = "/models/bottle1.gltf";
-const model2 = "/models/bottle2.gltf";
+const model1 = "https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/bottle1.gltf";
+const model2 = "https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/bottle2.gltf";
 // IMPORT BOTTLE 1 MODEL
 gltfLoader.load(model1, (gltf) => {
   gltf.scene.position.set(100, -20, 0);
@@ -468,7 +468,7 @@ function createAssets(modelName, img, px, py, pz, sx, sy, sz = 20) {
   
   // const material = new THREE.MeshStandardMaterial();
   const newMesh = new THREE.Mesh(geometry, material);
-  const texture = textureLoader.load(`models/arroundAssets/${img}`);
+  const texture = textureLoader.load(`https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/arroundAssets/${img}`);
   newMesh.position.set(px, py, pz);
   newMesh.name = modelName;
   newMesh.material.map = texture;
@@ -476,9 +476,9 @@ function createAssets(modelName, img, px, py, pz, sx, sy, sz = 20) {
   scene.add(newMesh);
 
   const vertexShaderLoader = new THREE.FileLoader();
-vertexShaderLoader.load("./Shaders/AssetShader/vertexShader.glsl", (vertexShaderCode) => {
+vertexShaderLoader.load("https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/src/Shaders/AssetShader/vertexShader.glsl", (vertexShaderCode) => {
   const fragmentShaderLoader = new THREE.FileLoader();
-  fragmentShaderLoader.load("/Shaders/AssetShader/fragmentShader.glsl", (fragmentShaderCode) => {
+  fragmentShaderLoader.load("https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/src/Shaders/AssetShader/fragmentShader.glsl", (fragmentShaderCode) => {
     // var texture = new THREE.TextureLoader().load('/macadamia1.png'); // Replace with your texture URL
 
     const customMaterial = new THREE.ShaderMaterial({

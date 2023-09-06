@@ -52603,8 +52603,8 @@ const h7 = document.querySelector("canvas.webgl"),
 c7.load(["/environmentMaps/studio/px.png", "/environmentMaps/studio/nx.png", "/environmentMaps/studio/py.png", "/environmentMaps/studio/ny.png", "/environmentMaps/studio/pz.png", "/environmentMaps/studio/nz.png"]);
 let Z0 = "",
     j0 = "";
-const u7 = "/models/bottle1.gltf",
-    d7 = "/models/bottle2.gltf";
+const u7 = "https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/bottle1.gltf",
+    d7 = "https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/bottle2.gltf";
 va.load(u7, (s) => {
     s.scene.position.set(100, -20, 0),
         s.scene.rotation.set(-163.786, 0, -176.3),
@@ -52814,7 +52814,7 @@ function V0(s, e, t, n, i, r, a, o = 20) {
     const c = new Nn(r, a, o),
         l = new _t(),
         h = new Pe(c, l),
-        u = l7.load(`models/arroundAssets/${e}`);
+        u = l7.load(`https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/arroundAssets/${e}`);
     h.position.set(t, n, i),
         (h.name = s),
         (h.material.map = u),
