@@ -130,11 +130,11 @@ checkViewportWidth(createAssets,["__argon2", "argon2.png", 470, -57, 0, 40, 40],
 checkViewportWidth(createAssets,["__argon3", "argon2.png", 244.1218,25, 0, 30, 30],3000);
 checkViewportWidth(createAssets,["__argon4", "argon2.png", 700,-120, 0, 20, 20],3000);
 checkViewportWidth(createAssets,["__argon5", "argon2.png", 470, -57, 0, 20, 20],3000);
-checkViewportWidth(createAssets,["__argon6", "argon2.png", 470, -57, 0, 10, 10],3000);
-checkViewportWidth(createAssets,["__argon7", "argon2.png", 470, -57, 0, 10, 10],3000);
-checkViewportWidth(createAssets,["__argon8", "argon2.png", 470, -57, 0, 10, 10],3000);
-checkViewportWidth(createAssets,["__argon9", "argon2.png", 470, -57, 0, 10, 10],3000);
-checkViewportWidth(createAssets,["__argon10", "argon2.png", 470, -57, 0, 10, 10],3000);
+checkViewportWidth(createAssets,["__argon6", "argon2.png", 470, -57, 0, 20, 20],3000);
+checkViewportWidth(createAssets,["__argon7", "argon2.png", 470, -57, 0, 20, 20],3000);
+checkViewportWidth(createAssets,["__argon8", "argon2.png", 470, -57, 0, 20, 20],3000);
+checkViewportWidth(createAssets,["__argon9", "argon2.png", 470, -57, 0, 20, 20],3000);
+checkViewportWidth(createAssets,["__argon10", "argon2.png", 470, -57, 0, 20, 20],3000);
 
 
 // Macadamia
@@ -182,13 +182,13 @@ checkViewportWidth(createAssets,["__shellmacadamia2", "shellmacadamia.png", 470,
 checkViewportWidth(createAssets,["__shellmacadamia3", "shellmacadamia.png", 580,-155.4787, 0, 37, 37],3000);
 checkViewportWidth(createAssets,["__shellmacadamia4", "shellmacadamia.png", 760.3069,-115, 0, 30, 30],3000);
 checkViewportWidth(createAssets,["__shellmacadamia5", "shellmacadamia.png", 470, -57, 0, 20, 20],3000);
-checkViewportWidth(createAssets,["__shellmacadamia6", "shellmacadamia.png", 470, -57, 0, 18, 18],3000);
+checkViewportWidth(createAssets,["__shellmacadamia6", "shellmacadamia.png", 470, -57, 0, 20, 20],3000);
 checkViewportWidth(createAssets,["__shellmacadamia7", "shellmacadamia.png", 268.7064,13, 0, 15, 15],3000);
 checkViewportWidth(createAssets,["__shellmacadamia8", "shellmacadamia.png", 470, -57, 0, 10, 10],3000);
-checkViewportWidth(createAssets,["__shellmacadamia9", "shellmacadamia.png", 470, -57, 0, 8, 8],3000);
-checkViewportWidth(createAssets,["__shellmacadamia10", "shellmacadamia.png", 470, -57, 0, 8, 8],3000);
-checkViewportWidth(createAssets,["__shellmacadamia11", "shellmacadamia.png", 470, -57, 0, 8, 8],3000);
-checkViewportWidth(createAssets,["__shellmacadamia12", "shellmacadamia.png", 470, -57, 0, 8, 8],3000);
+checkViewportWidth(createAssets,["__shellmacadamia9", "shellmacadamia.png", 470, -57, 0, 20, 20],3000);
+checkViewportWidth(createAssets,["__shellmacadamia10", "shellmacadamia.png", 470, -57, 0, 20, 20],3000);
+checkViewportWidth(createAssets,["__shellmacadamia11", "shellmacadamia.png", 470, -57, 0, 20, 20],3000);
+checkViewportWidth(createAssets,["__shellmacadamia12", "shellmacadamia.png", 470, -57, 0, 20, 20],3000);
 
 
 
@@ -199,10 +199,10 @@ checkViewportWidth(createAssets,["__honey2", "honey4.png", 170.3678,-32.5555, 0,
 checkViewportWidth(createAssets,["__honey3", "honey2.png", 440, -57, 0, 50, 50]);
 checkViewportWidth(createAssets,["__honey4", "honey1.png", 440, -57, 0, 50, 50]);
 // 1500 TO 3000
-checkViewportWidth(createAssets,["__honey1", "honey3.png", 729.7223,-32.1401, 0, 180, 180],3000);
+checkViewportWidth(createAssets,["__honey1", "honey3.png", 729.7223,-32.1401, 0, 230, 230],3000);
 checkViewportWidth(createAssets,["__honey2", "honey4.png", 170.3678,-32.5555, 0, 60, 60],3000);
-checkViewportWidth(createAssets,["__honey3", "honey2.png", 470, -57, 0, 50, 50],3000);
-checkViewportWidth(createAssets,["__honey4", "honey1.png", 470, -57, 0, 50, 50],3000);
+checkViewportWidth(createAssets,["__honey3", "honey2.png", 470, -57, 0, 70, 70],3000);
+checkViewportWidth(createAssets,["__honey4", "honey1.png", 470, -57, 0, 70, 70],3000);
 
 
 
@@ -710,6 +710,16 @@ function bottleHideAnimation(bottlescale1=60,bottlescale2=60,bottle1x,bottle2x,b
 
 
 
+
+positionDegugger(scene.getObjectByName("__shellmacadamia1"));
+positionDegugger(scene.getObjectByName("__shellmacadamia2"));
+positionDegugger(scene.getObjectByName("__shellmacadamia3"));
+positionDegugger(scene.getObjectByName("__shellmacadamia4"));
+positionDegugger(scene.getObjectByName("__shellmacadamia5"));
+positionDegugger(scene.getObjectByName("__shellmacadamia6"));
+positionDegugger(scene.getObjectByName("__shellmacadamia7"));
+positionDegugger(scene.getObjectByName("__shellmacadamia8"));
+positionDegugger(scene.getObjectByName("__shellmacadamia9"));
 function assetsSpreadAnimation(dimension=1500) {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -726,7 +736,7 @@ function assetsSpreadAnimation(dimension=1500) {
     var __argon8={ x: -155.479,y:-130.894 };
     var __argon9={ x: 606.646,y:41.199 };
 
-    var __macadamia1= { x: 360.799,y:-180.063 };
+    var __macadamia1= { x: 360.799,y:-253.6969 };
     var __macadamia2= { x: -401.325,y:-57.14 };
     var __macadamia3= { x: 360.799,y:139.537 };
     var __macadamia4= { x: -180.063,y:237.876 };
@@ -831,41 +841,42 @@ function assetsSpreadAnimation(dimension=1500) {
       },
     });
   }else if(dimension==3000){
-    var __double_argon1={ x: -315.249,y:261.488};
+    var __double_argon1={ x: -819.0897,y:459.1896};
     var __double_argon2={ x: 520.892,y:-130.894 };
-    var __argon1={ x: 90.368,y:262.46 };
-    var __argon2={ x: 236.656,y:-170.46 };
+    var __argon1={ x: -204.5324,y:459.1896 };
+    var __argon2={ x: 778.7594,y:-32.4563 };
     var __argon3={ x: -278.402,y:-32.555 };
     var __argon4={ x: 213.291,y:-155.479 };
-    var __argon5={ x: 236.656,y:-170.46 };
+    var __argon5={ x: -327.4438,y:-401.46 };
     var __argon6={ x: 41.199,y:16.614 };
-    var __argon7={ x: 139.537,y:-81.725 };
-    var __argon8={ x: -155.479,y:-130.894 };
+    var __argon7={ x: -843.672,y:-179.9501 };
+    var __argon8={ x: -499.5199,y:188.7843 };
     var __argon9={ x: 606.646,y:41.199 };
 
-    var __macadamia1= { x: 360.799,y:-180.063 };
-    var __macadamia2= { x: -401.325,y:-57.14 };
-    var __macadamia3= { x: 360.799,y:139.537 };
-    var __macadamia4= { x: -180.063,y:237.876 };
-    var __macadamia5= { x: -352.156,y:90.368 };
+    var __macadamia1=  { x: 655.8479,y:-327.4438 };
+    var __macadamia2= { x: -573.2668,y:-57.14 };
+    var __macadamia3= { x: 360.799,y:237.9489 };
+    var __macadamia4= { x: -597.849,y:385.4427 };
+    var __macadamia5= { x: -696.1782,y:90.368 };
     var __macadamia6= { x: 128,y:-91 };
 
     var __double_macadamia1= { x: -35.913,y:-213.887 };
 
-    var __shellmacadamia1= { x: 328,y: 90.366 };
-    var __shellmacadamia2= { x: -49.291,y: 109.706 };
-    var __shellmacadamia3= { x: 487.028,y: 187.817 };
-    var __shellmacadamia4= { x: 323.324,y: 240.034 };
+    var __shellmacadamia1= { x: 311.6958,y: 188.7843 };
+    var __shellmacadamia2= { x: -327.4438,y: 188.7843 };
+    var __shellmacadamia3= { x: 508.3541,y: 459.1896 };
+    var __shellmacadamia4= { x: 115.0374,y: 434.6073 };
     var __shellmacadamia5= { x: 25,y: -0.422 };
-    var __shellmacadamia6= { x: 107.731,y: 132.387 };
-    var __shellmacadamia7= { x: -362.27,y: 109 };
-    var __shellmacadamia8= { x: 459.231,y: 23.936 };
+    var __shellmacadamia6= { x: -81.6209,y: 287.1135 };
+    var __shellmacadamia7= { x: -720.7605,y: 109 };
+    var __shellmacadamia8= { x: -352.0261,y: -185.4182266388855 };
     var __shellmacadamia9= { x: 459.231,y: 23.936 };
 
-    var __honey1= { x: -155.479,y: 16.614 };
-    var __honey2= { x: -302.987,y: -278.402 };
-    var __honey3= { x: 582.061,y: 65.783 };
-    var __honey4= { x: 287.045,y: -253.817 };
+    
+    var __honey1= { x: -32.4563,y: 164.202 };
+    var __honey2= { x: -647.0136,y: -327.4438 };
+    var __honey3= { x: 729.5948,y: 237.9489 };
+    var __honey4= { x: 311.6958,y: -352.0261 };
     gsap.to(scene.getObjectByName("__honey1"), {
       scrollTrigger: {
         trigger: ".trigger2",
@@ -1254,32 +1265,32 @@ function positionDegugger(targetModel,name) {
     .max(1000)
     .step(0.0001);
 
-  debug
-    .add(targetModel.position, "z")
-    .name(name+" p z")
-    .min(-1000)
-    .max(1000)
-    .step(0.001);
-  debug
-    .add(targetModel.rotation, "x")
-    .name(name+" r x")
-    .min(-1000)
-    .max(1000)
-    .step(0.0001);
+  // debug
+  //   .add(targetModel.position, "z")
+  //   .name(name+" p z")
+  //   .min(-1000)
+  //   .max(1000)
+  //   .step(0.001);
+  // debug
+  //   .add(targetModel.rotation, "x")
+  //   .name(name+" r x")
+  //   .min(-1000)
+  //   .max(1000)
+  //   .step(0.0001);
 
-  debug
-    .add(targetModel.rotation, "y")
-    .name(name+" r y")
-    .min(-1000)
-    .max(1000)
-    .step(0.0001);
+  // debug
+  //   .add(targetModel.rotation, "y")
+  //   .name(name+" r y")
+  //   .min(-1000)
+  //   .max(1000)
+  //   .step(0.0001);
 
-  debug
-    .add(targetModel.rotation, "z")
-    .name(name+" r z")
-    .min(-1000)
-    .max(1000)
-    .step(0.001);
+  // debug
+  //   .add(targetModel.rotation, "z")
+  //   .name(name+" r z")
+  //   .min(-1000)
+  //   .max(1000)
+  //   .step(0.001);
 }
 
 const asexhelper = new THREE.AxesHelper(1000);
