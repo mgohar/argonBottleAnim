@@ -20,7 +20,7 @@ import * as dat from "lil-gui";
 // ! ||                                 LOADERS & INIT                                 ||
 // ! ||--------------------------------------------------------------------------------||
 let orbitRotationStatus = "null";
-const debug = new dat.GUI();
+// const debug = new dat.GUI();
 const gltfLoader = new GLTFLoader();
 const cubeTextureLoader = new THREE.CubeTextureLoader();
 const textureLoader = new THREE.TextureLoader();
@@ -75,7 +75,7 @@ gltfLoader.load(model1, (gltf) => {
     bottle02 = gltf.scene;
     bottle02.name = "bottle2";
     scene.add(gltf.scene);
-    bottlesDebugger();
+    // bottlesDebugger();
     // light1Degugger();
     // light2Degugger();
     // light3Degugger();
