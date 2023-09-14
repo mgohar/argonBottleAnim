@@ -61,8 +61,8 @@ const model1 = "https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/mo
 const model2 = "https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/bottle2.gltf";
 // IMPORT BOTTLE 1 MODEL
 gltfLoader.load(model1, (gltf) => {
-  gltf.scene.position.set(180, -20, 0);
-  gltf.scene.rotation.set(-163.786, 0, -176.3);
+  gltf.scene.position.set(180, -800, 0);
+  gltf.scene.rotation.set(-163.786, 2, -176.3);
   gltf.scene.scale.set(...b1Scale);
   bottle01 = gltf.scene;
   bottle01.name = "bottle1";
@@ -75,13 +75,15 @@ gltfLoader.load(model1, (gltf) => {
     bottle02 = gltf.scene;
     bottle02.name = "bottle2";
     scene.add(gltf.scene);
-    // bottlesDebugger();
+    bottlesDebugger();
     // light1Degugger();
     // light2Degugger();
     // light3Degugger();
     // light4Degugger();
     // positionDegugger(scene.getObjectByName("__honey1"));
 
+    checkViewportWidth(bottleInit,[-20,-800,0.8],1500);
+    checkViewportWidth(bottleInit,[-20,-800,0.8],3000);
     checkViewportWidth(bottleAnimation,[-16.278,-163.786],1500);
     checkViewportWidth(bottleAnimation,[131.746,-64.913,100,-70],3000);
     checkViewportWidth(bottleHideAnimation,[60,60,-16.278,-163.786],1500);
@@ -424,7 +426,7 @@ const tick = () => {
   checkViewportWidth(assetsAnimation,[elapsedTime, .335 ,"__shellmacadamia10",350,440,100, -550,         470, -57],3000)
   checkViewportWidth(assetsAnimation,[elapsedTime, .435 ,"__shellmacadamia11",350,440,100, -550,         470, -57],3000)
   checkViewportWidth(assetsAnimation,[elapsedTime, .535 ,"__shellmacadamia12",350,440,100, -550,         470, -57],3000)
-  checkViewportWidth(assetsAnimation,[elapsedTime, .635 ,"__honey1",350,450,100, -550,         563.7223,-57.1401],3000)
+  checkViewportWidth(assetsAnimation,[elapsedTime, .635 ,"__honey1",350,450,100, -550,         729.7223,-32.1401],3000)
   checkViewportWidth(assetsAnimation,[elapsedTime, .735 ,"__honey2",350,440,100, -550,         170.3678,-32.5555],3000)
   checkViewportWidth(assetsAnimation,[elapsedTime, .835 ,"__honey3",350,440,100, -550,         470, -57],3000)
   checkViewportWidth(assetsAnimation,[elapsedTime, .175 ,"__honey4",350,440,100, -550,         470, -57],3000)
@@ -551,13 +553,12 @@ function assetsAnimation(
   }
    else if (orbitRotationStatus == "stop"){
    
-    gsap.to(targetModel.position, { x: defaultX, duration: defaultDuration });
-    gsap.to(targetModel.position, { y: defaultY, duration: defaultDuration });
-    gsap.to(targetModel.position, { z: 0, duration: defaultDuration });
+    gsap.to(targetModel.position, { x: defaultX, y: defaultY, z: 0, duration: defaultDuration });
+
     
-    setTimeout(() => {
-      orbitRotationStatus = "null";
-    }, 500);
+    // setTimeout(() => {
+    //   orbitRotationStatus = "null";
+    // }, 500);
   }else if (orbitRotationStatus == "particalsExplosion"){
     
     gsap.to(targetModel.position, { x: 0, duration: 0.6,ease:'power1.out' });
@@ -608,6 +609,31 @@ vertexShaderLoader.load("https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.
 });
 
 
+}
+function bottleInit(bottle1y=100,defbottle1y,duration) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(bottle02, {
+    scrollTrigger: {
+      trigger: ".trigger0",
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => {
+        // Bottle 1
+        gsap.to(bottle01.position, { y: bottle1y, duration: duration });
+        gsap.to(bottle01.rotation, { y: 0, duration: duration }); //-471.094
+
+        
+      },
+      onLeaveBack: () => {
+        // Bottle 1
+        gsap.to(bottle01.position, {y: defbottle1y, duration: duration });
+        gsap.to(bottle01.rotation, { y: 2, duration: duration }); //-471.094
+
+        
+      },
+    },
+  });
 }
 function bottleAnimation(bottle1x,bottle2x,bottle1y=100,bottle2y=-50) {
   gsap.registerPlugin(ScrollTrigger);
@@ -706,20 +732,6 @@ function bottleHideAnimation(bottlescale1=60,bottlescale2=60,bottle1x,bottle2x,b
     },
   });
 }
-
-
-
-
-
-positionDegugger(scene.getObjectByName("__shellmacadamia1"));
-positionDegugger(scene.getObjectByName("__shellmacadamia2"));
-positionDegugger(scene.getObjectByName("__shellmacadamia3"));
-positionDegugger(scene.getObjectByName("__shellmacadamia4"));
-positionDegugger(scene.getObjectByName("__shellmacadamia5"));
-positionDegugger(scene.getObjectByName("__shellmacadamia6"));
-positionDegugger(scene.getObjectByName("__shellmacadamia7"));
-positionDegugger(scene.getObjectByName("__shellmacadamia8"));
-positionDegugger(scene.getObjectByName("__shellmacadamia9"));
 function assetsSpreadAnimation(dimension=1500) {
   gsap.registerPlugin(ScrollTrigger);
 
