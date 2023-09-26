@@ -59,8 +59,10 @@ let b1Scale= [60, 60, 60];
 let b2Scale= [60, 60, 60];
 let b1Position= [180, -800, 0];
 let b2Position= [100, -800, 0];
-const model1 = "https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/bottle1.gltf";
-const model2 = "https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/bottle2.gltf";
+// const model1 = "https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/bottle1.gltf";
+// const model2 = "https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.1/dist/models/bottle2.gltf";
+const model1 = "/models/bottle2_new.gltf";
+const model2 = "/models/bottle1_new.gltf";
 // IMPORT BOTTLE 1 MODEL
 gltfLoader.load(model1, (gltf) => {
   gltf.scene.position.set(...b1Position);
@@ -531,7 +533,7 @@ function assetsAnimation(
   defaultDuration = 1,
   distanceY = 50,
 ) {
-  console.log("distanceY:",distanceY);
+  // console.log("distanceY:",distanceY);
   targetModel = scene.getObjectByName(targetModel);
 
   if (orbitRotationStatus == "start") {

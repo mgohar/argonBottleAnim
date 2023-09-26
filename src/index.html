@@ -16,6 +16,10 @@
 </head>
 
 <body style="background: linear-gradient(133deg, #FBF1DD 0%, #EEDFC1 100%);">
+    <!-- <div style="position: fixed; top: 50px; left:50px">
+        <p style="color: rgb(0, 0, 0);font-weight: bold;">Mouse wheel: <span id="wheelCount">0</span></p>
+        <p style="color: rgb(0, 0, 0);font-weight: bold;">Mouse wheel attempts: <span id="wheelCountCount">0</span></p>
+    </div> -->
     <canvas class="webgl"></canvas>
     <!-- <canvas class="blur"></canvas>  -->
     <canvas class="particalsExplosion"></canvas>
@@ -35,7 +39,74 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.2/src/explosionParticals.js"></script>
     <script type="module" src="./script.js"></script>
-    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.7/dist/assets/index-894df907.js"></script> -->
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/mgohar/argonBottleAnim@1.0.8/dist/assets/index-9229f458.js"></script> -->
+    <!-- <script>
+        // Initialize a counter to keep track of wheel attempts
+        let wheelAttemptCount = -1;
+        let countX = 1;
+        let debounceTimeout;
+
+        // Get a reference to the element where you want to display the count
+        const wheelCountElement = document.getElementById('wheelCount');
+        const wheelCountElementCount = document.getElementById('wheelCountCount');
+
+        setTimeout(() => {
+            scrollToSection("trigger0")
+        }, 1000);
+
+        function scrollToSection(sectionId) {
+            const section = document.querySelector(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Function to update the count and display it
+        function updateWheelCount(event) {
+            if (wheelAttemptCount == 0) {
+                if (event.deltaY > 0) {
+                    countX++;
+                } else {
+                    countX--;
+                }
+                const section = document.querySelector(`.trigger${countX}`);
+                console.log("section:",`trigger${countX}`);
+                if (!section) {
+                    if (event.deltaY > 0) {
+                        countX--;
+                    } else {
+                        countX++;
+                    }
+                } else {
+                    scrollToSection(`.trigger${countX}`)
+                }
+            }
+            wheelAttemptCount += 1;
+            wheelCountElement.textContent = wheelAttemptCount;
+            wheelCountElementCount.textContent = countX;
+        }
+
+        // Add a wheel event listener to the document
+        document.addEventListener('wheel', function (event) {
+            // Clear any existing debounce timeout
+            clearTimeout(debounceTimeout);
+
+            // Increment the wheel attempt count by 1 for each attempt
+
+
+            // Call the update function to display the updated count
+            updateWheelCount(event);
+
+            // Set a debounce timeout to reset the count after a delay (e.g., 500 milliseconds)
+            debounceTimeout = setTimeout(() => {
+                wheelAttemptCount = -1;
+                updateWheelCount(event);
+            }, 300);
+        });
+
+        // Call the update function initially to set the count to 0
+        updateWheelCount(event);
+    </script> -->
 
 </body>
 
